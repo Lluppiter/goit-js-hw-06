@@ -16,8 +16,8 @@ const images = [
 const listItems = document.querySelector('ul');
 listItems.classList.add('gallery--flex');
 
-const items = images.map(
-  image => `<li><img src='${image.url}' alt="${image.alt}" width = '450px'></li>`
-);
+const items = images
+  .map(image => `<li><img src='${image.url}' alt="${image.alt}" width = '450px'></li>`)
+  .join('');
 
 listItems.insertAdjacentHTML('beforeend', items);
